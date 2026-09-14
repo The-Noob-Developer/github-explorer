@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { SiteHeader } from '@/components/site-header'
+import { SiteFooter } from '@/components/site-footer'
 import './globals.css'
 
 const inter = Inter({
@@ -57,6 +58,7 @@ export default function RootLayout({
         <ThemeProvider>
           <SiteHeader />
           {children}
+          <SiteFooter />
         </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
